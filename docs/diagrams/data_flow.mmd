@@ -1,0 +1,14 @@
+flowchart LR
+    Admin[Admin] -->|PDF bytes| Validate[Validation and SHA-256]
+    Validate -->|UUID PDF| Disk[(Configured upload directory)]
+    Disk -->|page text| Split[Chunking]
+    Split -->|text| Google[Google embedding API]
+    Google -->|vectors| Index[(FAISS)]
+    Split -->|source metadata| Mapping[(JSON mapping)]
+    User[Authenticated user] -->|question| Search[Retrieval]
+    Index --> Search
+    Mapping --> Search
+    Search -->|bounded evidence| LLM[Gemini API]
+    LLM -->|claims and quotes| Verify[Evidence validation]
+    Verify -->|answer and source rows| Audit[(MySQL audit)]
+    Verify --> User

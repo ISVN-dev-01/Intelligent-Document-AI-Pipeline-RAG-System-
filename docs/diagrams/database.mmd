@@ -1,0 +1,34 @@
+erDiagram
+    documents ||--o{ query_sources : referenced_by
+    queries ||--o{ query_sources : retrieves
+    documents {
+        string id PK
+        string filename
+        string file_hash UK
+        int file_size
+        int page_count
+        int chunk_count
+        datetime uploaded_at
+        string processing_status
+        float embedding_ms
+        float indexing_ms
+    }
+    queries {
+        string id PK
+        string actor_role
+        text query_text
+        text response_text
+        datetime created_at
+        int retrieval_count
+        float retrieval_ms
+        float duration_ms
+        string outcome
+    }
+    query_sources {
+        int id PK
+        string query_id FK
+        string document_id FK
+        int page_number
+        string chunk_id
+        float similarity_score
+    }

@@ -1,0 +1,16 @@
+flowchart TD
+    Q[Question] --> V[Validate]
+    V --> E[Query embedding]
+    E --> S[FAISS normalized inner product]
+    S --> F[Ready IDs and selected-document filter]
+    F --> K[Threshold and top-k]
+    K --> P[Quarantine suspicious passages and bound context]
+    P --> H{Evidence exists?}
+    H -->|No| N[Low-relevance response]
+    H -->|Yes| L[Gemini structured output]
+    L --> C{Answerable and all citations valid?}
+    C -->|No| A[Information not available]
+    C -->|Yes| O[Answer with verified source identities]
+    N --> D[(Audit transaction)]
+    A --> D
+    O --> D

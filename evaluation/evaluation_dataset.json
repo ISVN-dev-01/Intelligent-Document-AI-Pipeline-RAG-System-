@@ -1,0 +1,10 @@
+[
+  {"question":"What is the annual leave entitlement?", "expected_source":"employee_leave_policy.pdf", "expected_page":1, "expected_terms":["24"], "answerable":true},
+  {"question":"What is the process for requesting leave?", "expected_source":"employee_leave_policy.pdf", "expected_page":2, "expected_terms":["5 working days","line manager"], "answerable":true},
+  {"question":"What are the password requirements?", "expected_source":"company_it_security_policy.pdf", "expected_page":1, "expected_terms":["14"], "answerable":true},
+  {"question":"Who is responsible for security incidents?", "expected_source":"company_it_security_policy.pdf", "expected_page":2, "expected_terms":["Security Operations"], "answerable":true},
+  {"question":"What are the project milestone stages?", "expected_source":"project_management_guidelines.pdf", "expected_page":1, "expected_terms":["initiation","closure"], "answerable":true},
+  {"question":"Who approves project milestones?", "expected_source":"project_management_guidelines.pdf", "expected_page":1, "expected_terms":["sponsor"], "answerable":true},
+  {"question":"What is the CEO's favorite pizza topping?", "expected_source":null, "expected_page":null, "expected_terms":[], "answerable":false},
+  {"question":"What is the company's revenue in 2041?", "expected_source":null, "expected_page":null, "expected_terms":[], "answerable":false}
+]

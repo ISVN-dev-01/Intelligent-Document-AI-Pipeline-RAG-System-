@@ -1,0 +1,14 @@
+flowchart TB
+    Browser[Authenticated Streamlit session] --> Services[Application services]
+    Services --> Ingest[PDF validation and page extraction]
+    Ingest --> Chunk[Recursive text splitting]
+    Chunk --> Embeddings[EmbeddingService]
+    Embeddings --> FAISS[(FAISS and JSON snapshots)]
+    Services --> Query[Question validation and bounded memory]
+    Query --> Retrieve[Cosine retrieval and filters]
+    FAISS --> Retrieve
+    Retrieve --> Guard[Untrusted evidence and prompt guardrails]
+    Guard --> Gemini[Gemini structured claims]
+    Gemini --> Verify[Quote and source validation]
+    Verify --> Browser
+    Services --> SQL[(MySQL metadata and audit)]

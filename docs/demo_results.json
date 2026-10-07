@@ -1,0 +1,210 @@
+{
+  "run_at_utc": "2026-10-07T15:37:33.820441+00:00",
+  "mode": "demo",
+  "embedding_model": "offline-hash-v1:1024",
+  "llm_model": "extractive-demo",
+  "top_k": 5,
+  "threshold": 0.12,
+  "retrieval_hit_rate": 1,
+  "source_precision_proxy": 0.7916666666666666,
+  "answer_keyword_proxy": 1,
+  "unsupported_answer_rate_on_unanswerable": 0,
+  "mean_retrieval_ms": 11.834800003271084,
+  "cases": [
+    {
+      "question": "What is the annual leave entitlement?",
+      "answerable": true,
+      "retrieval_hit": true,
+      "source_precision_proxy": 1.0,
+      "answer_keyword_proxy": true,
+      "unsupported_answer_on_unanswerable": null,
+      "answer": "NORTHSTAR LABS | Synthetic demonstration document | Version 1.0\nPage 1\nNORTHSTAR LABS / PEOPLE & OPERATIONS\nEmployee leave policy\nSynthetic policy for the Document Intelligence project. Not a real company policy.\nAnnual leave entitlement\nEmployees at Northstar Labs receive 24 days of paid annual leave per calendar year. The leave year\nruns from January 1 to December 31. Public holidays are separate from the annual leave entitlement.\nCarry-forward\nEmployees may carry forward up to 5 unused annual leave days into the next calendar year. Carried\ndays must be used by March 31. Additional carry-forward requires written approval from Human\nResources. [S1]",
+      "outcome": "answered",
+      "retrieval_ms": 28.417300010914914,
+      "duration_ms": 62.27460000081919,
+      "sources": [
+        {
+          "name": "employee_leave_policy.pdf",
+          "page": 1,
+          "score": 0.2314550131559372
+        }
+      ]
+    },
+    {
+      "question": "What is the process for requesting leave?",
+      "answerable": true,
+      "retrieval_hit": true,
+      "source_precision_proxy": 0.5,
+      "answer_keyword_proxy": true,
+      "unsupported_answer_on_unanswerable": null,
+      "answer": "NORTHSTAR LABS | Synthetic demonstration document | Version 1.0\nPage 2\nNORTHSTAR LABS / PEOPLE & OPERATIONS\nEmployee leave policy\nSynthetic policy for the Document Intelligence project. Not a real company policy.\nRequesting leave\nSubmit a leave request through the HR portal at least 5 working days before the planned start date.\nThe line manager approves or declines the request within 2 working days. Human Resources\nmaintains the leave balance.\nUrgent absence\nFor an unexpected absence, notify the line manager before 10:00 AM on the first day whenever\npractical. Record the request in the HR portal when able. This policy does not specify parental leave\nor compensation rates. [S2]",
+      "outcome": "answered",
+      "retrieval_ms": 7.41619999462273,
+      "duration_ms": 43.21050000726245,
+      "sources": [
+        {
+          "name": "employee_leave_policy.pdf",
+          "page": 1,
+          "score": 0.15430334210395813
+        },
+        {
+          "name": "employee_leave_policy.pdf",
+          "page": 2,
+          "score": 0.14433756470680237
+        }
+      ]
+    },
+    {
+      "question": "What are the password requirements?",
+      "answerable": true,
+      "retrieval_hit": true,
+      "source_precision_proxy": 1.0,
+      "answer_keyword_proxy": true,
+      "unsupported_answer_on_unanswerable": null,
+      "answer": "NORTHSTAR LABS | Synthetic demonstration document | Version 1.0\nPage 1\nNORTHSTAR LABS / PEOPLE & OPERATIONS\nCompany IT security policy\nSynthetic policy for the Document Intelligence project. Not a real company policy.\nPassword requirements\nAccount passwords must contain at least 14 characters. Use a unique passphrase for every work\naccount. Do not reuse personal passwords. Multi-factor authentication is mandatory for email, remote\naccess and the HR portal.\nAccess approval\nThe employee's line manager approves requests for business-system access. The IT Service Desk\nprovisions approved access using the least-privilege principle. Shared accounts are prohibited. [S1]",
+      "outcome": "answered",
+      "retrieval_ms": 9.170999997877516,
+      "duration_ms": 45.64899999240879,
+      "sources": [
+        {
+          "name": "company_it_security_policy.pdf",
+          "page": 1,
+          "score": 0.17277368903160095
+        }
+      ]
+    },
+    {
+      "question": "Who is responsible for security incidents?",
+      "answerable": true,
+      "retrieval_hit": true,
+      "source_precision_proxy": 1.0,
+      "answer_keyword_proxy": true,
+      "unsupported_answer_on_unanswerable": null,
+      "answer": "NORTHSTAR LABS | Synthetic demonstration document | Version 1.0\nPage 2\nNORTHSTAR LABS / PEOPLE & OPERATIONS\nCompany IT security policy\nSynthetic policy for the Document Intelligence project. Not a real company policy.\nSecurity incidents\nThe Security Operations team is responsible for triaging security incidents. Employees must report\nsuspected incidents to the IT Service Desk within 30 minutes of discovery. Preserve suspicious\nmessages and do not forward them to colleagues.\nDocument handling\nStore internal documents only in approved company storage. Do not send restricted documents to\npublic AI services without explicit organizational authorization. Remove access promptly when an\nemployee leaves the company. [S1]",
+      "outcome": "answered",
+      "retrieval_ms": 12.008700010483153,
+      "duration_ms": 44.71840000769589,
+      "sources": [
+        {
+          "name": "company_it_security_policy.pdf",
+          "page": 2,
+          "score": 0.22176635265350342
+        }
+      ]
+    },
+    {
+      "question": "What are the project milestone stages?",
+      "answerable": true,
+      "retrieval_hit": true,
+      "source_precision_proxy": 1.0,
+      "answer_keyword_proxy": true,
+      "unsupported_answer_on_unanswerable": null,
+      "answer": "NORTHSTAR LABS | Synthetic demonstration document | Version 1.0\nPage 1\nNORTHSTAR LABS / PEOPLE & OPERATIONS\nProject management guidelines\nSynthetic policy for the Document Intelligence project. Not a real company policy.\nProject milestone stages\nEvery project uses five milestone stages: initiation, planning, implementation, validation and closure.\nThe project manager maintains the milestone register and assigns an owner to each deliverable.\nMilestone approval\nThe project sponsor approves milestone completion after reviewing the acceptance evidence. During\nvalidation, the quality lead records test outcomes and unresolved defects. A milestone cannot close\nwith an unresolved critical defect. [S1]",
+      "outcome": "answered",
+      "retrieval_ms": 7.374499997240491,
+      "duration_ms": 36.83739999542013,
+      "sources": [
+        {
+          "name": "project_management_guidelines.pdf",
+          "page": 1,
+          "score": 0.30323919653892517
+        }
+      ]
+    },
+    {
+      "question": "Who approves project milestones?",
+      "answerable": true,
+      "retrieval_hit": true,
+      "source_precision_proxy": 0.25,
+      "answer_keyword_proxy": true,
+      "unsupported_answer_on_unanswerable": null,
+      "answer": "NORTHSTAR LABS | Synthetic demonstration document | Version 1.0\nPage 1\nNORTHSTAR LABS / PEOPLE & OPERATIONS\nProject management guidelines\nSynthetic policy for the Document Intelligence project. Not a real company policy.\nProject milestone stages\nEvery project uses five milestone stages: initiation, planning, implementation, validation and closure.\nThe project manager maintains the milestone register and assigns an owner to each deliverable.\nMilestone approval\nThe project sponsor approves milestone completion after reviewing the acceptance evidence. During\nvalidation, the quality lead records test outcomes and unresolved defects. A milestone cannot close\nwith an unresolved critical defect. [S1]\n\nNORTHSTAR LABS | Synthetic demonstration document | Version 1.0\nPage 2\nNORTHSTAR LABS / PEOPLE & OPERATIONS\nProject management guidelines\nSynthetic policy for the Document Intelligence project. Not a real company policy.\nDelivery and reporting\nThe project manager publishes a weekly status report each Friday. The report includes completed\nwork, upcoming milestones, risks and decisions needed. Changes to scope require sponsor approval\nbefore implementation.\nLeave and handover\nTeam members planning leave must prepare a handover note listing active tasks, deadlines and\nbackup owners. The line manager approves the leave request under the employee leave policy. The\nproject manager updates the delivery plan. [S2]\n\nNORTHSTAR LABS | Synthetic demonstration document | Version 1.0\nPage 2\nNORTHSTAR LABS / PEOPLE & OPERATIONS\nEmployee leave policy\nSynthetic policy for the Document Intelligence project. Not a real company policy.\nRequesting leave\nSubmit a leave request through the HR portal at least 5 working days before the planned start date.\nThe line manager approves or declines the request within 2 working days. Human Resources\nmaintains the leave balance.\nUrgent absence\nFor an unexpected absence, notify the line manager before 10:00 AM on the first day whenever\npractical. Record the request in the HR portal when able. This policy does not specify parental leave\nor compensation rates. [S3]",
+      "outcome": "answered",
+      "retrieval_ms": 10.758100004750304,
+      "duration_ms": 45.44329999771435,
+      "sources": [
+        {
+          "name": "project_management_guidelines.pdf",
+          "page": 1,
+          "score": 0.22742938995361328
+        },
+        {
+          "name": "project_management_guidelines.pdf",
+          "page": 2,
+          "score": 0.21160370111465454
+        },
+        {
+          "name": "employee_leave_policy.pdf",
+          "page": 2,
+          "score": 0.14433756470680237
+        },
+        {
+          "name": "company_it_security_policy.pdf",
+          "page": 1,
+          "score": 0.14106912910938263
+        }
+      ]
+    },
+    {
+      "question": "What is the CEO's favorite pizza topping?",
+      "answerable": false,
+      "retrieval_hit": null,
+      "source_precision_proxy": null,
+      "answer_keyword_proxy": null,
+      "unsupported_answer_on_unanswerable": false,
+      "answer": "The information is not available in the uploaded documents.",
+      "outcome": "no_answer",
+      "retrieval_ms": 9.345500002382323,
+      "duration_ms": 42.39719999895897,
+      "sources": [
+        {
+          "name": "company_it_security_policy.pdf",
+          "page": 1,
+          "score": 0.1639075130224228
+        }
+      ]
+    },
+    {
+      "question": "What is the company's revenue in 2041?",
+      "answerable": false,
+      "retrieval_hit": null,
+      "source_precision_proxy": null,
+      "answer_keyword_proxy": null,
+      "unsupported_answer_on_unanswerable": false,
+      "answer": "The information is not available in the uploaded documents.",
+      "outcome": "no_answer",
+      "retrieval_ms": 10.187100007897243,
+      "duration_ms": 38.80850000132341,
+      "sources": [
+        {
+          "name": "company_it_security_policy.pdf",
+          "page": 1,
+          "score": 0.14962640404701233
+        }
+      ]
+    }
+  ],
+  "ingestion": [
+    {
+      "filename": "company_it_security_policy.pdf",
+      "pages": 2,
+      "chunks": 2,
+      "embedding_ms": 2.757000009296462,
+      "indexing_ms": 44.676400008029304
+    },
+    {
+      "filename": "employee_leave_policy.pdf",
+      "pages": 2,
+      "chunks": 2,
+      "embedding_ms": 2.918199999839999,
+      "indexing_ms": 71.26460000290535
+    },
+    {
+      "filename": "project_management_guidelines.pdf",
+      "pages": 2,
+      "chunks": 2,
+      "embedding_ms": 1.5559000021312386,
+      "indexing_ms": 63.502200006041676
+    }
+  ]
+}

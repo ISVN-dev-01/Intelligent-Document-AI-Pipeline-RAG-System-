@@ -1,0 +1,24 @@
+sequenceDiagram
+    actor User
+    participant UI as Streamlit
+    participant Query as QueryService
+    participant DB as Repository
+    participant Search as Retriever/FAISS
+    participant LLM as Gemini
+    User->>UI: Question
+    UI->>Query: Authenticated principal and bounded questions
+    Query->>Query: Validate and acquire pipeline lock
+    Query->>DB: Read ready document IDs
+    Query->>Search: Embed and search with filters
+    Search-->>Query: Ranked passages and timings
+    alt Safe evidence available
+        Query->>LLM: System rules plus untrusted evidence
+        LLM-->>Query: Structured claims and quotes
+        Query->>Query: Validate source labels and quotes
+    else No evidence
+        Query->>Query: Abstain without calling LLM
+    end
+    Query->>DB: Commit query and source audit
+    DB-->>Query: Commit success
+    Query-->>UI: Answer and evidence
+    UI-->>User: Plain text with source expanders
